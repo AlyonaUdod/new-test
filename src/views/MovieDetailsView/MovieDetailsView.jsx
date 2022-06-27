@@ -35,7 +35,6 @@ export default function MovieDetailsView() {
 
   useEffect(() => {
     if (location.state) {
-      console.log(location.state);
       setFrom(location.state.from);
     }
   }, [location]);
