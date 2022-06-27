@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import * as api from "../../services/api";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../../components/SearchBar1/SearchBar";
 import MovieItem from "../../components/MovieItem/MovieItem";
 import { toast } from "react-toastify";
 

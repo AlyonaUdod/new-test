@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
 import { toast } from "react-toastify";
 import propTypes from "prop-types";
 import s from "./SearchBar.module.css";
 
 const SearchBar = ({ onClick }) => {
-    const [searchQuery, setSearchQuery] = useState("");
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search).get("query");
+    const [searchQuery, setSearchQuery] = useState(searchParams ?? "");
 
     const handleChange = (e) => {
         setSearchQuery(e.target.value);
